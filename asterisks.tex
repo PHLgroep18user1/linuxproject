@@ -1,1 +1,245 @@
-fhfghfg
+%%replace_mail
+\documentclass[12pt,a4paper]{report}
+\usepackage[dutch]{babel}
+\title{Linuxproject asterisk}
+\author{Jens Snyers}
+\date{\today}
+\usepackage{fancyhdr} %pakket voor voettekst en koptekst
+\pagestyle{fancy} %declareren van de pagestyle
+\fancyhf{} %disabelen van de huidige voet en koptekst
+\fancyhead[L]{Project Linux} %Koptekst
+\fancyhead[C]{Asterisk}
+\fancyhead[R]{Jens Snyers}
+\fancyfoot[L]{Provinciale Hogeschool limburg} %Voettekst
+\fancyfoot[C]{2TIN}
+\fancyfoot[R]{\thepage}
+\usepackage{graphicx} %pakket voor afbeeldingen in de tekst te plaatsen
+\usepackage{listings} %pakket voor code in de tekst te plaatsen
+\usepackage{appendix} %pakket voor de bijlages
+\usepackage{hyperref} %pakket voor url
+\usepackage{makeidx}
+\makeindex
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\includegraphics[width=10cm, height=6cm]{images/asterisk} \\
+\textsc{\LARGE Asterisk}\\[1.5cm]
+\textsc{\Large Project Linux}\\[0.5cm]
+\emph{Auteur:} Jens Snyers
+\vfill
+{\large \today}
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+
+\chapter{ASTERISK\index{Asterisk} ~\cite{ASTERISK}}
+\section{Wat is Asterisk }
+\paragraph{•}
+Asterisk is een gratis open source\index{Open source} framework voor het maken van communicatie applicaties. Doormiddel van Asterisk te instaleren verander je een gewone computer in een communicatie server.Asterisk is de software achter verschillende applicaties.
+\paragraph{•}
+Digium is de sponsor van Asterisk en heeft speciaal voor Asterisk een reeks telefoons ontwikkeld. Hierdoor is er een goede support voor gebruikers van Asterisk en Digium producten.
+
+\section{Applicaties (enkele voorbeelden)}
+\paragraph{IP PBX}
+Asterisk was gemaakt als een PBX (Private Automatic Branch eXchange) wat eigenlijk een telefooncentrale is voor prive van een bedrijf of organisatie.
+
+\paragraph{Voicemail}
+De voicemail apllicatie kan zo worden geimplementeerd als een basis stand-alone systeem dat de verschillende bercihten op verschillende manieren kan bijhouden.
+
+\section{Instalatie (procedure)}
+\paragraph{Kies je telefoon hardware}
+Doordat de meeste Asterisk applicaties connecteren met bestaande telefoon systemen heb je deze hardware nodig. Afhankelijk van de groote van het systeem moet je andere hardware kiezen.
+
+\paragraph{Kies jou computer hardware}
+Asterisk kan op elke computer draaien maar bij het bouwen van een telefoon applicatie server is het beste dat je toch enkele basis benodigdheden aan te kopen
+
+\paragraph{Linux en Asterisk instaleren}
+Wanneer je de nodige Asterisk hardware hebt kan je Asterisk instaleren. Asterisk draait op een Linux systeem dus het is ook nodig om Linux te instaleren. Asterisk kan gedownload worden van hun website \label{link}\url{www.asterisk.org} daar zijn verschillende paketten beschikbaar.
+
+\paragraph{Configureren van de connecties}
+Als laatste stap gaan we de connecties implementeren naar VoIP en PSTN diensten.
+
+\section{Voor- en Nadelen}
+\paragraph{•}
+\begin{table} [h]
+\begin{tabular}{ | l | }
+  \hline
+  Voordelen\\
+  \hline
+  Asterisk is vrij te downloaden\\
+  Asterisk kan overweg met zeer veel protocollen\\
+  Asterisk kan makkerlijk uitbreiden\\
+  Asterisk is geschikt voor grote en kleine netwerken\\
+  Asterisk kan op elke pc draaien\\
+  \hline
+\end{tabular}
+\caption[Voordelen Asterisk]{In deze tabel worden enkele voordelen getoond van Asterisk.}
+\end{table}
+
+\begin{table} [h]
+\begin{tabular}{ | l | }
+  \hline
+  Nadelen\\
+  \hline
+  Asterisk wordt niet officieel ondersteund\\
+  Asterisk kan moeilijk te configureren zijn zonder kennis linux\\
+  Asterisk geen GUI\\
+  \hline
+\end{tabular}
+\caption[Nadelen Asterisk]{In deze tabel worden enkele nadelen getoond van Asterisk.}
+\end{table}
+
+\newpage
+\section{Support}
+\paragraph{•}
+Op de website van \emph{Asterisk \ref{link}} is er een uitstekende ondersteuning voor gebruikers die Astersisk combineren met hardware en producten van Digium. Zo zijn er verschillende filmpjes met uitleg is er een documentatie deel waar gebruikers hun ervaringen op kunnen delen. Ook hebben ze ervoor gezorgt een goed aanspreekpunt te voorzien voor hun gebruikers d.m.v een 24/7 online ondersteuning systeem en een forum.
+
+\appendix
+\chapter{Versiebeheersysteem\index{Versiebeheersysteem}}
+\section{Instalatie (Github)\index{Github}}
+\paragraph{•}
+Ik heb gekozen om met github te werken als versiesysteem, dit omdat ik er al een eerdere ervaring met heb gehad. GitHub is tevens een gratis versiesysteem zolang dat jouw bestanden publiek zijn, de toegang tot jouw bestanden kan je echter zelf bepalen.
+
+\subsection{Aanmaken van account en repository}
+\paragraph{•}
+Het aanmaken van een account en een repository\index{Repository} gebeurt op de website van github \emph{www.github.com}. Door vanboven op "Signup and Pricing" te klikken ga je naar de registratiepagina, hier kies je dan voor een gratis account. Na het aanmaken en bevestigen van het account kan je dan inloggen. Wanneer je bent ingelogd klik je rechts vanboven op je gebruikersnaam en dan komt er volgend scherm. \emph{Figuur \ref{afbeelding1}}
+\begin{figure} [h]
+\includegraphics[width=15cm, height=2cm]{images/Afbeelding1}
+\caption[Aanmaken repository]{Wanneer u hier op "new repository" klikt gaat u naar een pagina waar u een repository kan aanmaken. Nadat alles is ingevuld kan je de repository aanmaken.}
+\label{afbeelding1}
+\end{figure}
+
+\subsection{Github installeren}
+\paragraph{•}
+Het instaleren van github in ubuntu gebeurt via de terminal. Door volgende code in te typen wordt git geinstaleerd.\footnote{Binnen in de kaders staat steeds wat er ingevoerd moet worden in de terminal.}
+\begin{lstlisting}[frame=BTrl]
+$ sudo apt-get install git
+\end{lstlisting}
+Wanneer git geinstalleerd is kan je beginnen aan de configuratie van het versiebeheersysteem.
+
+\subsection{Configureren van het git systeem}
+\paragraph{•}
+\begin{enumerate}
+    \item 
+We gaan eerst na of er al ssh keys aanwezig zijn in het systeem 
+\begin{lstlisting}[frame=BTrl]
+$ cd ~/.ssh
+\end{lstlisting}
+Als het "No such file or directory" terug geeft mag naar stap 3 gaan.
+    \item 
+Omdat er al een ssh key aanwezig is gaan we van deze oude key een back-up maken.
+\begin{lstlisting}[frame=BTrl]
+$ ls
+$ mkdir key_backup
+$ cp id_rsa* key_backup
+$ rm id_rsa*
+\end{lstlisting}
+    \item 
+Nadat met in de .ssh folder zit gaat men een nieuwe ssh key aanmaken.
+\begin{lstlisting}[frame=BTrl]
+$ ssh-keygen -t rsa -C "e-mailadress"
+\end{lstlisting}
+Op de plaats van \emph{e-mailadress} is het de bedoeling dat je uw eigen e-mail meegeeft.
+	\item
+De aangemaakt key wordt opgeslagen in de .ssh folder. Als volgende stap gaan we deze key toevoegen aan github door bij configuratie een SSH key toe te voegen. Zoals je in de afbeelding kan zien is mijn key al reeds toegevoegd.\emph{Figuur \ref{afbeelding2}}
+\begin{figure} [h]
+\includegraphics[width=15cm, height=8cm]{images/Afbeelding2}
+\caption[Toevoegen Key]{Door vanboven rechts op configuratie te klikken en dan op SSH keys kan je een key toevoegen.}
+\label{afbeelding2}
+\end{figure}
+\end{enumerate}
+
+\subsection{Testen van de verbinding en gebruikersinfo configureren}
+\paragraph{•}
+Wanneer je volgend commando in de terminal intypd komt er als alles goed gegaan is een tekst waar je dan "yes" op antwoord. Hierna ben je geauthenticeert door github.
+\begin{lstlisting}[frame=BTrl]
+$ ssh -T git@github.com
+\end{lstlisting}
+Als volgende kan je nog gebruikersinfo toevoegen door volgende code in de terminal te typen
+\begin{lstlisting}[frame=BTrl]
+$ git config --global user.name "Voornaam Achternaam"
+$ git config --global user.email "e-mailadress"
+\end{lstlisting}
+Wanneer je alle bovenstaande stappen hebt gedaan kan je documenten synchronizeren met github.
+
+\section{Comitten\index{Committen} (github)}
+\paragraph{•}
+Het comitten ofwel het synchronizeren tussen de bestanden die op de computer staan en de bestanden die worden bijgehouden door github gebeurt door een reeks commando's in te typen in de terminal.
+\begin{lstlisting}[frame=BTrl]
+$ git clone git@github.com:
+	PHLgroep18user1/linuxproject.git
+$ cd linuxproject
+$ git remote add upstream 
+	git://github.com/PHLgroep18user1/
+	linuxproject.git
+$ git add asterisk.tex
+$ git commit -m 'versie 1'
+$ git push origin master
+\end{lstlisting}
+Hierbij is ``PHLgroep18user1'' de gebruikersnaam van uw github account en asterisk.tex het document dat zal worden gesynchronizeerd.\emph{Figuur \ref{afbeelding3}}
+\begin{figure} [h]
+\includegraphics[width=15cm,height=6cm]{images/Afbeelding3}
+\caption[Historie github]{Nadat de commit succesvol was kan je in github na gaan wie wat en wanneer heeft gemaakt.}
+\label{afbeelding3}
+\end{figure}
+
+\renewcommand\thechapter{B} % hierdoor is het bijlage B en niet A
+\chapter{Configureren Mail Server\index{Mail Server}}
+\section{Inleiding}
+\paragraph{•}
+Ik maak gebruik van de opensource e-mailclient genaamd Mutt. In de volgende alinea's zal ik uitleggen wat Mutt is en hoe je dit moet instaleren.
+\paragraph{•}
+Mutt is een opensource-, tekstgebaseerde e-mailclient en is beschikbaar voor Linux en Unix. Het werd oorspronkelijk ontworpen door Michael Elkins en is in 1995 vrijgegeven onder de GNU General Public License.
+
+\section{Installeren en configureren Mutt\index{Mutt}}
+\paragraph{•}
+De installatie gebeurt via de terminal.
+\begin{lstlisting}[frame=BTrl]
+$ sudo apt-get install mutt
+\end{lstlisting}
+Wanneer de installatie voltooid is typ je volgend commando in op de terminal.
+\begin{lstlisting}[frame=BTrl]
+$ gedit .muttrc
+\end{lstlisting}
+Indien het bestand al bestaat wordt dit geopend, bestaat dit nog niet dan zal dit worden aangemaakt. In het bestand typ je het volgende.
+\begin{lstlisting}[frame=BTrl]
+set from = "gebruikersnaam@gmail.com"
+set realname = "naam voornaam"
+set imap_user = "gebruikersnaam@gmail.com"
+set imap_pass = "paswoord"
+set smtp_url = "smtp://gebruikersnaam@smtp.gmail.com:587/"
+set smtp_pass = "paswoord"
+\end{lstlisting}
+
+\section{Testen mutt}
+\paragraph{•}
+We gaan onze installatie en configuratie testen d.m.v een mail te sturen, dit doe je door het volgend commando in de terminal in te typen.
+\begin{lstlisting}[frame=BTrl]
+$ .muttrc
+$ echo "boodschap" | mutt -s "onderwerp" "e-mail adres"
+\end{lstlisting}
+Indien alles goed geconfigureerd is zal er een e-mail met de boodschap ``boodschap'', met als onderwerp ``onderwerp'' naar het e-mail adres ``e-mail adres'' gestuurd worden.
+
+\renewcommand\thechapter{C} % hierdoor is het bijlage C en niet A
+\chapter{Bash script}
+\section{Bash script}
+\paragraph{•}
+\begin{lstlisting}[frame=BTrl]
+code
+code
+\end{lstlisting}
+
+\listoffigures
+
+\listoftables
+
+\printindex
+
+\bibliography{asterisks}
+\bibliographystyle{plain}
+\nocite{LaTeX,LaTeX2,Appendix}
+
+\end{document}
