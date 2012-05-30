@@ -24,7 +24,7 @@
 
 \begin{titlepage}
 \begin{center}
-\includegraphics[width=10cm, height=6cm]{images/asterisk} \\
+\includegraphics[width=10cm, height=6cm]{asterisk.jpg} \\
 \textsc{\LARGE Asterisk}\\[1.5cm]
 \textsc{\Large Project Linux}\\[0.5cm]
 \emph{Auteur:} Jens Snyers
@@ -36,34 +36,54 @@
 \tableofcontents
 
 \chapter{ASTERISK\index{Asterisk} ~\cite{ASTERISK}}
-\section{Wat is Asterisk }
+\section{Wat is VoIP}
 \paragraph{•}
-Asterisk is een gratis open source\index{Open source} framework voor het maken van communicatie applicaties. Doormiddel van Asterisk te instaleren verander je een gewone computer in een communicatie server.Asterisk is de software achter verschillende applicaties.
+Alvorens ik kan uitleggen wat Asterisk is geef ik even een korte uitleg over VoIP. VoIP is de afkorting voor Voice over Internet Protocol. Dit betekent in het kort: spreken over (data) IP netwerken. De spraak wordt omgezet in digitale informatie en wordt vervolgens verstuurd over het IP netwerk. Hierdoor betaald u voor dit gesprek helemaal niks, waar u zich ook bevindt. Voorwaarde is dan wel dat u beide over een redelijke breedband internet verbinding beschikt. 
+
+\section{Wat is Asterisk}
 \paragraph{•}
-Digium is de sponsor van Asterisk en heeft speciaal voor Asterisk een reeks telefoons ontwikkeld. Hierdoor is er een goede support voor gebruikers van Asterisk en Digium producten.
+Asterisk is een software pakket, gebaseerd op GNU/linux software waarmee een volledig functionerende telefooncentrale mee is op te zetten. Hierdoor is het mogelijk om met een pc (server) een VoIP telefooncentrale op te bouwen. Standaard zijn volgende functies ingebouwd: Voicemail service met directory, conferentie gesprekken, Interactief Voice Response, wachtrijen, caller-ID en het ondersteunt verschillende protocollen zoals SIP, H.323 (zowel client als gateway).
 
-\section{Applicaties (enkele voorbeelden)}
-\paragraph{IP PBX}
-Asterisk was gemaakt als een PBX (Private Automatic Branch eXchange) wat eigenlijk een telefooncentrale is voor prive van een bedrijf of organisatie.
+\section{Voordelen}
+\paragraph{•}
+Het mooie van Asterisk is dat het geen speciale hardware nodig heeft om met voice over IP om te gaan. Voor de connectie met de buitenwereld via het traditionele netwerk kun je eenvoudige ISDN of analoge kaarten in de computer gebruiken. Asterisk ondersteunt een handvol kaarten zoals deze op de markt te verkrijgen zijn. Asterisk ondersteunt natuurlijk de kaarten zoals deze worden aangeboden door Digium™. Zij verkopen verschillende ISDN kaarten zoals BRI, PRI en analoog. Het ondersteunt een groote gedeelte van de TDM protocollen zoals wij die hier in Europa kennen. Verder ondersteunt Asterisk de standaard signalering zoals die gebruikt wordt in het zakelijke telefonie systeem. Hiermee wordt een brug geslagen tussen het traditionele telefonie systeem en het toekomstige VoIP.
 
-\paragraph{Voicemail}
-De voicemail apllicatie kan zo worden geimplementeerd als een basis stand-alone systeem dat de verschillende bercihten op verschillende manieren kan bijhouden.
+\section{Beschikbaarheid}
+\paragraph{•}
+Asterisk is primair ontwikkeld om te draaien op GNU/Linux voor x/86. Overal ter wereld word dit stuk software probleemloos gecompileerd voor OpenBSD, FreeBSD en Mac OS X Jaguar. Op andere platforms en standaard UNIX-like operating systeem moet dit redelijk eenvoudig toegepast kunnen worden voor degene die daar de tijd en de intelligentie voor heeft. 
 
-\section{Instalatie (procedure)}
-\paragraph{Kies je telefoon hardware}
-Doordat de meeste Asterisk applicaties connecteren met bestaande telefoon systemen heb je deze hardware nodig. Afhankelijk van de groote van het systeem moet je andere hardware kiezen.
+\section{Mogelijkheden Asterisk}
+\paragraph{•}
+Asterisk gebaseerde telefonie oplossingen bieden een grootte en flexibele inzet mogelijkheden. Zowel de standaard telefooncentrale mogelijkheden als de nieuwste technologien op het gebied van voip. Asterisk bied u standaard voicemail, conferentie gesprekken, wachtrijen, wachtmuziek en nog vele meer.  In totaal heeft asterisk meer dan 100 verschillende mogelijkheden.
 
-\paragraph{Kies jou computer hardware}
-Asterisk kan op elke computer draaien maar bij het bouwen van een telefoon applicatie server is het beste dat je toch enkele basis benodigdheden aan te kopen
+\section{Installatie Procedure}
+\paragraph{•}
+Alvorens je Asterisk op een bepaald besturingssysteem kan instaleren Zijn er nog andere taken uit te voeren. Zo werkt Asterisk met bepaalde hardware componenten samen, deze moeten dus eerst naar gelang de grote van het systeem worden gemonteerd en geïnstalleerd. Niet alleen moeten er dus VoIP telefoons worden aangekocht maar moet de server ook voorzien zijn van de juiste hardware componenten. Indien alle hardware gekozen en geïnstalleerd is kan men aan de installatie beginnen, Zoals hier voor gezegd is Asterisk gebaseerd op GNU/linux software dus moet de server dit ook zijn. Nadat Linux geïnstalleerd is kan men de Asterisk Applicatie toevoegen. Hierna dient de applicatie nog geconfigureerd te worden en dan kan met het VoIP systeem in gebruik nemen .
 
-\paragraph{Linux en Asterisk instaleren}
-Wanneer je de nodige Asterisk hardware hebt kan je Asterisk instaleren. Asterisk draait op een Linux systeem dus het is ook nodig om Linux te instaleren. Asterisk kan gedownload worden van hun website \label{link}\url{www.asterisk.org} daar zijn verschillende paketten beschikbaar.
+\section{Applicaties}
+\subsection{IP PBX}
+\paragraph{•}
+Asterisk is oorspronkelijk gebouwd als een PBX wat vandaag de dag goed is voor 18 percent van de wereldwijde markt van bedrijf telefonie systemen. Niet te min is er een vereiste kennis van bepaalde dingen zoals Linux, telefonie en basis script programming.
 
-\paragraph{Configureren van de connecties}
-Als laatste stap gaan we de connecties implementeren naar VoIP en PSTN diensten.
+\subsection{Gateway}
+\paragraph{•}
+Gateways gaan verouderde toestellen (PBX’s, ACD’x,..) omzetten naar de moderne VoIP systemen en services. Doordat Asterisk zowel als verouderde toestellen en de moderne VoIP toestellen ondersteund is dit dus een sterke applicatie om gateways en protocol convertors bij te bouwen.
+
+\subsection{IVR}
+\paragraph{•}
+Interactive Voice Response wordt gebruikt om geld te besparen in steeds dezelfde terug komende taken. (Belgacom gebruikt dit bijvoorbeeld om uw vraag zo goed mogelijk te beantwoorden, door dit aan de juiste mensen door te geven.)  Asterisk maakt het makkelijk om applicaties te bouwen die de toon of spreek input gaat verwerken van de beller.
+
+\subsection{Conference}
+\paragraph{•}
+Asterisk heeft een applicatie ontwikkeld ‘MeetMe´´ een conference bridge applicatie die tegelijkertijd kan worden gebruikt door honderden personen met maar enkele lijnen van Dialplanscript. 
+
+\section{Support}
+\paragraph{•}
+Op de website van Asterisk is er een uitstekende ondersteuning voor gebruikers die Astersisk combineren met hardware en producten van Digium.  Zo is er een Asterisk wiki waar je informatie kan op zoeken. Is er een forum waar je met al je vragen terecht kunt en is er een 24/7 online klantendienst.
 
 \section{Voor- en Nadelen}
 \paragraph{•}
+Hier nog een kleine opsomming van enkele voor en nadelen
 \begin{table} [h]
 \begin{tabular}{ | l | }
   \hline
@@ -92,11 +112,6 @@ Als laatste stap gaan we de connecties implementeren naar VoIP en PSTN diensten.
 \caption[Nadelen Asterisk]{In deze tabel worden enkele nadelen getoond van Asterisk.}
 \end{table}
 
-\newpage
-\section{Support}
-\paragraph{•}
-Op de website van \emph{Asterisk \ref{link}} is er een uitstekende ondersteuning voor gebruikers die Astersisk combineren met hardware en producten van Digium. Zo zijn er verschillende filmpjes met uitleg is er een documentatie deel waar gebruikers hun ervaringen op kunnen delen. Ook hebben ze ervoor gezorgt een goed aanspreekpunt te voorzien voor hun gebruikers d.m.v een 24/7 online ondersteuning systeem en een forum.
-
 \appendix
 \chapter{Versiebeheersysteem\index{Versiebeheersysteem}}
 \section{Instalatie (Github)\index{Github}}
@@ -107,7 +122,7 @@ Ik heb gekozen om met github te werken als versiesysteem, dit omdat ik er al een
 \paragraph{•}
 Het aanmaken van een account en een repository\index{Repository} gebeurt op de website van github \emph{www.github.com}. Door vanboven op "Signup and Pricing" te klikken ga je naar de registratiepagina, hier kies je dan voor een gratis account. Na het aanmaken en bevestigen van het account kan je dan inloggen. Wanneer je bent ingelogd klik je rechts vanboven op je gebruikersnaam en dan komt er volgend scherm. \emph{Figuur \ref{afbeelding1}}
 \begin{figure} [h]
-\includegraphics[width=15cm, height=2cm]{images/Afbeelding1}
+\includegraphics[width=15cm, height=2cm]{Afbeelding1.png}
 \caption[Aanmaken repository]{Wanneer u hier op "new repository" klikt gaat u naar een pagina waar u een repository kan aanmaken. Nadat alles is ingevuld kan je de repository aanmaken.}
 \label{afbeelding1}
 \end{figure}
@@ -146,7 +161,7 @@ Op de plaats van \emph{e-mailadress} is het de bedoeling dat je uw eigen e-mail 
 	\item
 De aangemaakt key wordt opgeslagen in de .ssh folder. Als volgende stap gaan we deze key toevoegen aan github door bij configuratie een SSH key toe te voegen. Zoals je in de afbeelding kan zien is mijn key al reeds toegevoegd.\emph{Figuur \ref{afbeelding2}}
 \begin{figure} [h]
-\includegraphics[width=15cm, height=8cm]{images/Afbeelding2}
+\includegraphics[width=15cm, height=8cm]{Afbeelding2.png}
 \caption[Toevoegen Key]{Door vanboven rechts op configuratie te klikken en dan op SSH keys kan je een key toevoegen.}
 \label{afbeelding2}
 \end{figure}
@@ -181,7 +196,7 @@ $ git push origin master
 \end{lstlisting}
 Hierbij is ``PHLgroep18user1'' de gebruikersnaam van uw github account en asterisk.tex het document dat zal worden gesynchronizeerd.\emph{Figuur \ref{afbeelding3}}
 \begin{figure} [h]
-\includegraphics[width=15cm,height=6cm]{images/Afbeelding3}
+\includegraphics[width=15cm,height=6cm]{Afbeelding3.png}
 \caption[Historie github]{Nadat de commit succesvol was kan je in github na gaan wie wat en wanneer heeft gemaakt.}
 \label{afbeelding3}
 \end{figure}
@@ -226,10 +241,42 @@ Indien alles goed geconfigureerd is zal er een e-mail met de boodschap ``boodsch
 \renewcommand\thechapter{C} % hierdoor is het bijlage C en niet A
 \chapter{Bash script}
 \section{Bash script}
-\paragraph{•}
 \begin{lstlisting}[frame=BTrl]
-code
-code
+#!/bin/bash
+#inlezen van de gegevens.
+echo "Voer een aanspreking in"
+read Aanspr
+echo "Voer je voornaam in"
+read Vnaam
+echo "Voer je achternaam in"
+read Anaam
+echo "Voer je email in"
+read EMAIL
+
+#Spaties uit voor en achternaam doen.
+voorachter="$Vnaam $Anaam"
+bestandsnaam=`echo "$voorachter" | sed 's/ //g'`
+
+#Kopieren van de .tex file
+cp asterisks.tex $bestandsnaam.tex
+
+#Veranderen van auteur
+sed -i -E 's/\Jens Snyers/\ '$Vnaam' '$Anaam'/g' 
+$bestandsnaam.tex
+
+#Builden van .tex file
+pdflatex $bestandsnaam
+bibtex $bestandsnaam
+makeindex $bestandsnaam
+pdflatex $bestandsnaam
+pdflatex $bestandsnaam
+
+#Email bericht.
+SUBJECT="Asterisk"
+EMAILMESSAGE="$Aanspr $Vnaam $Anaam \nIn de bijlage 
+kan u het PDF-bestand vinden van mijn project."
+echo -e $EMAILMESSAGE | mutt -s $SUBJECT -a 
+$bestandsnaam.pdf -- $EMAIL
 \end{lstlisting}
 
 \listoffigures
